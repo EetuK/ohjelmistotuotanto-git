@@ -1,3 +1,0 @@
-# Ohjelmisto
-
-Tämä on aloitustiedosto.
