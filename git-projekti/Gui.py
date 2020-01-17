@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 from enum import Enum
 import base64
 
-sg.theme('DarkAmber')  # No gray windows please!
+sg.theme('DarkAmber')
 
 with open("./images/button_0.png", "rb") as image_file:
     button_0 = base64.b64encode(image_file.read())
@@ -59,7 +59,7 @@ class Keys(Enum):
     Num_0 = 0
 
     EQUALS = 11
-    CLEAR  = 22
+    CLEAR = 22
     PLUS = 33
     MINUS = 44
     MULT = 55
@@ -73,42 +73,64 @@ class Keys(Enum):
 
 BACKGROUND_COLOR = ('#2C2825', '#2C2825')
 
-layout = [ 
-            [
-                sg.Text('sdsd', size=(8, 1), font=('Helvetica', 67), justification='right', text_color='black', background_color='white', key=Keys.OUTPUT)
-            ],
-            [
-                sg.Button('', image_data=button_ce, button_color=BACKGROUND_COLOR, key=Keys.CLEAR, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_root, button_color=BACKGROUND_COLOR, key=Keys.ROOT, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_exp, button_color=BACKGROUND_COLOR, key=Keys.EXP, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_ans, button_color=BACKGROUND_COLOR, key=Keys.ANS, image_subsample=2, border_width=0)
-            ],
-            [
-                sg.Button('', image_data=button_7, button_color=BACKGROUND_COLOR, key=Keys.Num_1, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_8, button_color=BACKGROUND_COLOR, key=Keys.Num_2, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_9, button_color=BACKGROUND_COLOR, key=Keys.Num_3, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_divide, button_color=BACKGROUND_COLOR, key=Keys.DIVIDE, image_subsample=2, border_width=0)
-            ],
-            [
-                sg.Button('', image_data=button_4, button_color=BACKGROUND_COLOR, key=Keys.Num_4, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_5, button_color=BACKGROUND_COLOR, key=Keys.Num_5, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_6, button_color=BACKGROUND_COLOR, key=Keys.Num_6, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_multi, button_color=BACKGROUND_COLOR, key=Keys.MULT, image_subsample=2, border_width=0)
-            ],
-            [
-                sg.Button('', image_data=button_1, button_color=BACKGROUND_COLOR, key=Keys.Num_7, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_2, button_color=BACKGROUND_COLOR, key=Keys.Num_8, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_3, button_color=BACKGROUND_COLOR, key=Keys.Num_9, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_minus, button_color=BACKGROUND_COLOR, key=Keys.MINUS, image_subsample=2, border_width=0)
-            ],
-            [
-                sg.Button('', image_data=button_equals, button_color=BACKGROUND_COLOR, key=Keys.EQUALS, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_0, button_color=BACKGROUND_COLOR, key=Keys.Num_0, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_decimal, button_color=BACKGROUND_COLOR, key=Keys.DEC, image_subsample=2, border_width=0),
-                sg.Button('', image_data=button_plus, button_color=BACKGROUND_COLOR, key=Keys.PLUS, image_subsample=2, border_width=0)
-            ],
+layout = [
+    [
+        sg.Text('asdasd', size=(8, 1), font=('Helvetica', 67), justification='right',
+                text_color='black', background_color='white', key=Keys.OUTPUT)
+    ],
+    [
+        sg.Button('', image_data=button_ce, button_color=BACKGROUND_COLOR,
+                  key=Keys.CLEAR, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_root, button_color=BACKGROUND_COLOR,
+                  key=Keys.ROOT, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_exp, button_color=BACKGROUND_COLOR,
+                  key=Keys.EXP, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_ans, button_color=BACKGROUND_COLOR,
+                  key=Keys.ANS, image_subsample=2, border_width=0)
+    ],
+    [
+        sg.Button('', image_data=button_7, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_1, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_8, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_2, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_9, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_3, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_divide, button_color=BACKGROUND_COLOR,
+                  key=Keys.DIVIDE, image_subsample=2, border_width=0)
+    ],
+    [
+        sg.Button('', image_data=button_4, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_4, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_5, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_5, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_6, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_6, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_multi, button_color=BACKGROUND_COLOR,
+                  key=Keys.MULT, image_subsample=2, border_width=0)
+    ],
+    [
+        sg.Button('', image_data=button_1, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_7, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_2, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_8, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_3, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_9, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_minus, button_color=BACKGROUND_COLOR,
+                  key=Keys.MINUS, image_subsample=2, border_width=0)
+    ],
+    [
+        sg.Button('', image_data=button_equals, button_color=BACKGROUND_COLOR,
+                  key=Keys.EQUALS, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_0, button_color=BACKGROUND_COLOR,
+                  key=Keys.Num_0, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_decimal, button_color=BACKGROUND_COLOR,
+                  key=Keys.DEC, image_subsample=2, border_width=0),
+        sg.Button('', image_data=button_plus, button_color=BACKGROUND_COLOR,
+                  key=Keys.PLUS, image_subsample=2, border_width=0)
+    ],
 
-         ]
+]
+
 
 class CalcGui:
 
@@ -119,17 +141,17 @@ class CalcGui:
         event, _ = self.window.read()
         return event
 
-    def update(self, value:str):
+    def update(self, value: str):
         if not isinstance(value, str):
             raise ValueError(f'Output value must be in string format not {str(type(value))}')
         elif len(value) > 8:
             raise ValueError(f'Output must be shorter than 8, not {str(len(value))}')
         else:
             self.window[Keys.OUTPUT].update(value)
-            
-    
+
     def close(self):
         self.window.close()
+
 
 # Example
 if __name__ == "__main__":
@@ -141,4 +163,3 @@ if __name__ == "__main__":
         if event == Keys.Num_0:
             gui.update("test")
     gui.close()
-
