@@ -75,7 +75,7 @@ BACKGROUND_COLOR = ('#2C2825', '#2C2825')
 
 layout = [
     [
-        sg.Text('asdasd', size=(8, 1), font=('Helvetica', 67), justification='right',
+        sg.Text('Laskin', size=(8, 1), font=('Helvetica', 67), justification='right',
                 text_color='black', background_color='white', key=Keys.OUTPUT)
     ],
     [
@@ -90,11 +90,11 @@ layout = [
     ],
     [
         sg.Button('', image_data=button_7, button_color=BACKGROUND_COLOR,
-                  key=Keys.Num_1, image_subsample=2, border_width=0),
+                  key=Keys.Num_7, image_subsample=2, border_width=0),
         sg.Button('', image_data=button_8, button_color=BACKGROUND_COLOR,
-                  key=Keys.Num_2, image_subsample=2, border_width=0),
+                  key=Keys.Num_8, image_subsample=2, border_width=0),
         sg.Button('', image_data=button_9, button_color=BACKGROUND_COLOR,
-                  key=Keys.Num_3, image_subsample=2, border_width=0),
+                  key=Keys.Num_9, image_subsample=2, border_width=0),
         sg.Button('', image_data=button_divide, button_color=BACKGROUND_COLOR,
                   key=Keys.DIVIDE, image_subsample=2, border_width=0)
     ],
@@ -110,11 +110,11 @@ layout = [
     ],
     [
         sg.Button('', image_data=button_1, button_color=BACKGROUND_COLOR,
-                  key=Keys.Num_7, image_subsample=2, border_width=0),
+                  key=Keys.Num_1, image_subsample=2, border_width=0),
         sg.Button('', image_data=button_2, button_color=BACKGROUND_COLOR,
-                  key=Keys.Num_8, image_subsample=2, border_width=0),
+                  key=Keys.Num_2, image_subsample=2, border_width=0),
         sg.Button('', image_data=button_3, button_color=BACKGROUND_COLOR,
-                  key=Keys.Num_9, image_subsample=2, border_width=0),
+                  key=Keys.Num_3, image_subsample=2, border_width=0),
         sg.Button('', image_data=button_minus, button_color=BACKGROUND_COLOR,
                   key=Keys.MINUS, image_subsample=2, border_width=0)
     ],
